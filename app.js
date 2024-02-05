@@ -1,9 +1,10 @@
 let numeroSecreto = 0;
 let intentos = 0;
 let listaNumerosSorteados = [];
-let numeroMaximo = requestNumber()
+let numeroMaximo = 0
+
 function requestNumber(){
-    prompt('¿Cual sera el número maximo de lo que quieres encontrar?');
+    return prompt('¿Cual sera el número maximo de lo que quieres encontrar?');
 }
 
 function asignarTextoElemento(elemento, texto){
@@ -52,6 +53,7 @@ function generarNumeroSecreto() {
 }
 
 function condicionesIniciales(){
+    numeroMaximo = requestNumber();
     asignarTextoElemento('h1', 'Juego del número secreto');
     asignarTextoElemento('p', `Indica un número del 1 al ${numeroMaximo}`);
     numeroSecreto = generarNumeroSecreto();
