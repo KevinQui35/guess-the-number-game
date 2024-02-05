@@ -1,7 +1,10 @@
 let numeroSecreto = 0;
 let intentos = 0;
 let listaNumerosSorteados = [];
-let numeroMaximo = prompt('¿Cual sera el número maximo de lo que quieres encontrar?');
+let numeroMaximo = requestNumber()
+function requestNumber(){
+    prompt('¿Cual sera el número maximo de lo que quieres encontrar?');
+}
 
 function asignarTextoElemento(elemento, texto){
     let elementoHTML = document.querySelector(elemento);
